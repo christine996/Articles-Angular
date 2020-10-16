@@ -13,9 +13,11 @@ export class AddCommentComponent implements OnInit {
   constructor(private http: HttpClient,
     private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
-    this.Id = this.route.snapshot.paramMap.get('Id');
-  }
+    ngOnInit(): void {
+      // getting article Id to add comment to it
+      this.Id = this.route.snapshot.paramMap.get('Id');
+    }
+    // passing comment and id to api
   addComment() {
     this.check = true;
     const url = 'http://localhost:53363/api/addComment';

@@ -15,12 +15,14 @@ export class EditArticlesComponent implements OnInit {
     private http: HttpClient) { }
 
   ngOnInit(): void {
+     // accessing all the passed params from viewArticles component to show it to user and edit it
     this.Id = this.route.snapshot.paramMap.get('Id');
     this.articleName = this.route.snapshot.paramMap.get('articleName');
     this.articleCategory = this.route.snapshot.paramMap.get('articleCategory');
     this.articleContent = this.route.snapshot.paramMap.get('articleContent');
 
   }
+    // passing any edited params to api to post it in DB
   edit() {
     const url = 'http://localhost:53363/api/editArticle';
 

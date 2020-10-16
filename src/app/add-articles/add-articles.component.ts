@@ -17,6 +17,7 @@ export class AddArticlesComponent implements OnInit {
   ngOnInit(): void {
 
   }
+    //passing params given from user to api to add a new article
   post() {
     const url = 'http://localhost:53363/api/addArticle';
 
