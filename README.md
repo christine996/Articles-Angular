@@ -1,5 +1,6 @@
 # Articles-Angular
 
+First,you need to run the apis project(https://github.com/christine996/Articles-APIs.git) because all are local on port http://localhost:53363
 run the project using command: ng serve
 no installs needed (if any run: npm install) 
 
