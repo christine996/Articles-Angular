@@ -1,0 +1,17 @@
+
+    <mat-card class="example-card">
+        <mat-card-content>
+        <form>
+          <mat-form-field class="example-full-width">
+            <input matInput [(ngModel)]="comment" name="comment" placeholder="Add your comment here">
+          </mat-form-field>
+        </form>
+        </mat-card-content>
+        <mat-card-actions>
+          <button (click)="addComment()" mat-raised-button class="add-btn">Add Comment</button>
+        </mat-card-actions>
+      </mat-card>
+
+      <mat-label *ngIf="check" style="color: red;">
+          Your comment will be added after admin approval!
+      </mat-label>

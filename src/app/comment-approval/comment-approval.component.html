@@ -1,0 +1,27 @@
+ <mat-card class="example-card">
+ 
+    <mat-card-content>
+      <p>
+        {{articleComment}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="approveComment()" class="approve-btn">Approve Comment</button>
+      <button mat-button (click)="disapproveComment()" class="approve-btn">Disapprove Comment</button>
+    </mat-card-actions>
+  </mat-card>
+<br>
+<br>
+<h3 *ngIf="checkComment" style="color: red;">
+  Your Comment has been approved!
+</h3>
+  <form class="example-form" *ngIf="this.check">
+    <mat-form-field class="example-full-width">
+      <input name="reason" type="text" matInput placeholder="Reason for rejection" [(ngModel)]="disapprovalReason">
+    </mat-form-field>
+    <br>
+    <br>
+    <button mat-button (click)="submit()">Submit</button>
+  </form>
+  
+

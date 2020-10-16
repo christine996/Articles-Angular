@@ -1,0 +1,29 @@
+<mat-card class="example-card">
+  <mat-card-content>
+  <form>
+    <mat-form-field class="example-full-width">
+      <!-- <mat-label>Name</mat-label> -->
+      <input matInput [(ngModel)]="articleName" name="articleName">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <!-- <mat-label>category</mat-label> -->
+
+        <input matInput [(ngModel)]="articleCategory" name="articleCategory">
+
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width" >
+      <!-- <mat-label>Content</mat-label> -->
+      <textarea matInput [(ngModel)]="articleContent" name="articleContent"></textarea>
+    </mat-form-field>
+ 
+  </form>
+</mat-card-content>
+<mat-card-actions>
+  <button (click)="edit()" mat-raised-button class="edit-btn">Edit</button>
+</mat-card-actions>
+</mat-card>
+  
+
+
